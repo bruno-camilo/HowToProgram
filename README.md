@@ -50,13 +50,13 @@ Eu sou um desenvolvedor Oracle SOA Suite e Oracle Integration Clouyd iniciando c
 
     21) Estruturas de dados genéricas personalizadas
 
-    22)  Componentes GUI: parte 2 
+    22) Componentes GUI: parte 2 
 
-    23)  Concorrência 
+    23) Concorrência 
 
-    24)  Acesso a bancos de dados com JDBC 
+    24) Acesso a bancos de dados com JDBC 
 
-    25)GUI do JavaFX: parte 1 
+    25) GUI do JavaFX: parte 1 
 ## Usage/Examples
 
 ```java
