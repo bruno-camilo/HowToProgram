@@ -30,5 +30,16 @@ public class Account{
 			this.balance += depositAmout; 
 	}
 	
+	//Codigo referente ao Ex 3.11
+	public void withdrawal(double withdrawalAmount){
+		if(withdrawalAmount > balance)
+			System.out.println("Withdrawal amount exceeded account balance");
+	
+		else
+			balance -= withdrawalAmount;
+		
+
+		
+	}
 
 }

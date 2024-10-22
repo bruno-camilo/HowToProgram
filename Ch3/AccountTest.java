@@ -24,25 +24,52 @@ public class AccountTest{
 
 		// Exemplo 3
 		System.out.println("------------------------------------------------------------------");
-		System.out.printf("%s balance: $%.2f %n", account1.getName(), account1.getBalance());
-		System.out.printf("%s balance: $%.2f %n", account2.getName(), account2.getBalance());
+		// add method displayAccount
+		//System.out.printf("%s balance: $%.2f %n", c.getName(), account1.getBalance());
+		//System.out.printf("%s balance: $%.2f %n", account2.getName(), account2.getBalance());
+		displayAccount(account1);
+		displayAccount(account2);
+
 
 		System.out.print("Enter deposit amount for account1: "); 
 		double depositAmount = sc.nextDouble();
 		System.out.printf("%nadding %.2f to account1 balance%n",  depositAmount);
 		account1.deposit(depositAmount);
+		//Código referente ao ex3.11
+		System.out.print("Enter amount withdrawal: ");
+		double withdralAmount = sc.nextDouble();
+		account1.withdrawal(withdralAmount);
 
-		System.out.printf("%s balance: %.2f%n", account1.getName(), account1.getBalance());
-		System.out.printf("%s balance: %.2f%n", account2.getName(), account2.getBalance());
+		//System.out.printf("%s balance: %.2f%n", account1.getName(), account1.getBalance());
+		//System.out.printf("%s balance: %.2f%n", account2.getName(), account2.getBalance());
+		displayAccount(account1);
+		displayAccount(account2);
 
 		System.out.print("Enter deposit amount for account2: "); 
 		depositAmount = sc.nextDouble();
 		System.out.printf("%nadding %.2f to account1 balance%n",  depositAmount);
 		account2.deposit(depositAmount);
 
-		System.out.printf("%s balance: %.2f%n", account1.getName(), account1.getBalance());
-		System.out.printf("%s balance: %.2f%n", account2.getName(), account2.getBalance());
 
+		//Código referente ao ex3.11
+		
+		System.out.print("Enter amount withdrawal: ");
+		withdralAmount = sc.nextDouble();
+		account2.withdrawal(withdralAmount);
+
+		//System.out.printf("%s balance: %.2f%n", account1.getName(), account1.getBalance());
+		//System.out.printf("%s balance: %.2f%n", account2.getName(), account2.getBalance());
+		displayAccount(account1);
+		displayAccount(account2);
+		
 		sc.close();
 	}
+
+	//Ex 3.15
+	public static void displayAccount(Account accountToDisplay){
+		System.out.printf("%s balance: $%.2f %n", accountToDisplay.getName(), accountToDisplay.getBalance());
+	}
+
+
+
 }
