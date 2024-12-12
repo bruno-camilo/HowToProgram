@@ -1,7 +1,6 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
+package Ch16;
+
+import java.util.*;
 
 public class CollectionTest {
     public static void main(String[] args) {
@@ -19,20 +18,24 @@ public class CollectionTest {
 
         System.out.println("ArrayList: ");
 
+
         for(int count = 0; count < list.size(); count ++)
             System.out.printf("%s ", list.get(count));
 
+        removeColors(list, removeList);
         System.out.printf("%n%nArrayList after calling removeColors:%n");
         for (String color : list)
             System.out.printf("%s ", color);
     }
 
-    public static void removeColors(List<String> list){
-        System.out.printf("%nlist:%n");
+    public static void removeColors(Collection<String> collection1, Collection<String> collection2){
 
-        for(String color: list)
-            System.out.printf("%s ", color);
-        System.out.println();
+        Iterator<String> iterator = collection1.iterator();
+
+        while (iterator.hasNext()){
+            if (collection2.contains(iterator.next()))
+                iterator.remove();
+        }
     }
 
 }
